@@ -356,8 +356,11 @@ When adding features, prioritize:
 ### Environment Variables
 
 - `PORT`: API server port (default: 3000)
-- `API_CORS_ORIGINS`: Comma-separated CORS origins
-- `VITE_API_BASE_URL`: Frontend API base URL (auto-detected in Codespaces)
+- `API_CORS_ORIGINS`: Comma-separated CORS origins (defaults include localhost and Codespaces)
+- Frontend API base URL is auto-detected via `frontend/src/api/config.ts`:
+  - In Codespaces: Uses `CODESPACE_NAME` environment variable
+  - Local development: Defaults to `http://localhost:3000`
+  - Runtime override: Can be set via `window.RUNTIME_CONFIG.API_URL`
 
 ### Compatibility
 
