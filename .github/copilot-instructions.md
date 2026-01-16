@@ -12,6 +12,8 @@ OctoCAT Supply is a supply chain management demo application built to showcase G
 
 ### Monorepo Structure
 
+The project uses npm workspaces to manage two main packages (API and Frontend):
+
 ```
 ├── api/                 # Backend Express.js API
 │   ├── src/
@@ -276,7 +278,7 @@ npm run lint --workspace=frontend    # Run ESLint
 
 - **API**: http://localhost:3000
   - Swagger docs: http://localhost:3000/api-docs
-- **Frontend**: http://localhost:5137 (or as configured by Vite)
+- **Frontend**: http://localhost:5137 (configured in `vite.config.ts`)
 
 ## Coding Best Practices
 
@@ -374,9 +376,11 @@ When adding features, prioritize:
 Project documentation is in the `/docs` folder:
 - `architecture.md`: System architecture and design
 - `build.md`: Build and deployment instructions
+- `deployment.md`: Deployment configuration details
 - `tao.md`: Observability patterns
 - `demo-script.md`: Demo presentation guide
 - `model-comparison.md`: AI model comparisons
+- `design/`: UI design mockups and assets
 
 When making significant changes:
 1. Update relevant documentation files
